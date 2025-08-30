@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="my-weather-app">
+      <div class="container">
+        <div class="left main-card">
+          <div class="city-field-wrapper">
+            <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+              <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+            </svg>
+            <input type="text" name="city" id="city" placeholder="Search for a city..." autocomplete="off"/>
+            <!-- City Suggestions Dropdown -->
+            <div class="city-suggestions" id="city-suggestions">
+              <!-- Suggestions will be populated here -->
+            </div>
+          </div>
+          <h3 class="my-locations">My Locations</h3>
+          <div class="location-history">
+            <!-- get location history from session storage -->
+          </div>
+        </div>
+        <div class="right">
+          <div class="main-weather main-card">
+            <div class="section-header">
+              <div class="city-time">
+                <h2 class="city" id="city-name">City Name</h2>
+                <p class="time">Today, 10:00 AM</p>
+              </div>
+              <div class="temprature">
+                <h2>22°C</h2>
+                <p>Most Clear</p>
+              </div>
+            </div>
+            <div class="forecast">
+              <h3 class="forecast-heading">7-Day Forecast</h3>
+              <div class="forecast-wrapper">
+                <!-- forecast will be populated here dynamically -->
+              </div>
+            </div>
+          </div>
+          <!-- Extra Information Card -->
+          <div class="extra-info main-card">
+            <h3 class="extra-info-heading">Additional Details</h3>
+            <div class="extra-info-grid">
+              <div class="info-item">
+                <div class="info-icon">💧</div>
+                <div class="info-content">
+                  <p class="info-label">Humidity</p>
+                  <p class="info-value" id="humidity">--%</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">💨</div>
+                <div class="info-content">
+                  <p class="info-label">Wind Speed</p>
+                  <p class="info-value" id="wind-speed">-- km/h</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">☀️</div>
+                <div class="info-content">
+                  <p class="info-label">UV Index</p>
+                  <p class="info-value" id="uv-index">--</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">🌡️</div>
+                <div class="info-content">
+                  <p class="info-label">Feels Like</p>
+                  <p class="info-value" id="feels-like">--°C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <script src="weatherapi.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
